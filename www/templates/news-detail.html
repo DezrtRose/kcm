@@ -1,0 +1,20 @@
+<ion-view view-title="News Events">
+	<ion-content class="news-event-detail">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="last-item">
+                <div class="item item-text-wrap">
+                    <ion-item ng-if="message.image != '' && message.image_status == '1'">
+                            <img src="{{image}}" />
+                    </ion-item>
+                    <div class="content-wrap">
+                        <h4>{{message.content_title}}</h4>
+                    <!-- <span>{{message.created_at}}</span> -->
+                        <div ng-bind-html="message.description"></div>
+                    </div>                        
+                </div>
+        </div>
+	</ion-content>
+</ion-view>

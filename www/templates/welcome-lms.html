@@ -1,0 +1,27 @@
+<ion-view view-title="Welcome to LMS">
+    <ion-content class="wel-lms">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="col col-50 attendence">
+                <a class="tab-item" href="#/attendance">
+                    <i class="icon ion-eye"></i>
+                    ATTENDANCE
+                </a>
+            </div>
+            <div class="col col-50 subjects">
+                <a class="tab-item" href="#/subjects">
+                    <i class="icon ion-ios-book"></i>
+                    SUBJECTS
+                </a>
+            </div>
+        </div>
+        <div class="row" ng-if="teacher">
+            <div class="col col-50 attendence apply-leave">
+                <a class="tab-item" href="#/take-attendance">
+                    <i class="icon ion-compose"></i>
+                    TAKE ATTENDANCE
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

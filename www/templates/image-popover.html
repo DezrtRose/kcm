@@ -1,0 +1,12 @@
+<div class="modal image-modal transparent" ng-click="closeModal()">
+    <ion-modal-view>
+		<ion-header-bar class="bar bar-header bar-positive">
+	  		<button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+		</ion-header-bar>
+		<ion-content class="padding">
+			<div>
+				<img ng-src="{{baseUrl}}{{activeSlide}}" class="fullscreen-image" />
+			</div>
+		</ion-content>
+	</ion-modal-view>
+</div>

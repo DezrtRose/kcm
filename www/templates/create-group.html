@@ -1,0 +1,33 @@
+<ion-view view-title="Groups">
+    <ion-content class="group-create">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="col group-create-head">
+                <span class="tab-item">
+                    <i class="icon ion-android-contacts"></i>
+                    Create Group
+                </span>
+            </div>
+        </div>
+        
+        <div class="group-create-detail">
+            <span class="item item-input">
+                <input type="text" placeholder="Group name">
+                <i class="ios-small"></i>
+            </span>
+            
+            <h5>Authorization <a href="">What’s this ?</a></h5>
+            
+            <span class="item item-input">
+                <i class="icon ion-ios-search-strong placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </span>
+            
+            <div class="btn-create">
+                <button class="button">
+                    Create
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

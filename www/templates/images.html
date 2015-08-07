@@ -1,0 +1,26 @@
+<ion-view view-title="Photo Gallery">
+	<ion-content class="padding photo-gallery last-item">
+		<ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+		<div ng-if="errorMessage" class="offlinerror">
+			<p>{{errorMessage}}</p>
+		</div>
+		<h3>{{albumTitle}}</h3>
+            <ul class="last-item">
+	    	<li ng-repeat="img in message" class="col col-50">
+                    <ion-item ng-if="img.images != ''">
+                        <img ng-src="{{baseUrl}}{{img.images}}" ng-click="openModal()"/>
+                    </ion-item>
+	    	</li>
+	    </ul>
+	</ion-content>
+	<script id="image-modal.html" type="text/ng-template">
+		<div class="modal image-modal transparent"
+		   ng-click="closeModal()">
+		<ion-slide-box show-pager="false">
+		  <ion-slide ng-repeat="oImage in message">
+		    <img ng-src="{{baseUrl}}{{oImage.images}}" class="fullscreen-image" />
+		  </ion-slide>
+		</ion-slide-box>
+		</div>
+	</script>
+</ion-view>

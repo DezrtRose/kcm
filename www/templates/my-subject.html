@@ -1,0 +1,99 @@
+<ion-view view-title="My Subjects">
+    <ion-content class="my-subject">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="list">
+                <div class="item item-input item-select">
+                    <select name="subjects"
+                            ng-model="mySubject.subjectName"
+                            ng-options="subject.id as subject.name for subject in subjects"
+                            ng-change="selectAssessment()"
+                            ng-if="teacher">
+                        <option value="">Select Subject</option>
+                    </select>
+                    <select name="subjects"
+                            ng-model="mySubject.subjectName"
+                            ng-options="subject.subject_name as subject.name for subject in subjects"
+                            ng-if="student">
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select" ng-if="teacher">
+                    <select name="sessionName" ng-model="mySubject.sessionName"
+                            ng-options="filteredAssessment.name as filteredAssessment.name for filteredAssessment in filteredAssessments.assessments">
+                        <option value="">Select Assessment</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select">
+                    <label>Subject Status</label>
+                    <div class="radio-wrap">
+                        <ion-radio ng-click="subjectTypeChange('Active')">Active</ion-radio>
+                        <ion-radio ng-click="subjectTypeChange('Inactive')">Inactive</ion-radio>
+                    </div>
+                </div>
+                <div class="btn-load">
+                    <button class="button" ng-click="filterResults()">Load Results</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-repeat="showResult in showResults" ng-if="student">
+            <div class="subject-view">
+                <div class="subject-title">
+                    <h4>{{showResult.subject_name}}</h4>
+                </div>
+                <div class="subject-detail">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Subjects</th>
+                            <th>Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="assessment in showResult.assessments">
+                            <td>{{assessment.name}}</td>
+                            <td class="text-center">{{assessment.mark}}<span ng-if="assessment.enable_grade && assessment.mark != 'NP'"> GPA</span></td>
+                        </tr>
+                        </tbody>
+                        <thead>
+                        <tr>
+                            <th>Total Marks</th>
+                            <th>{{showResult.total_mark}}</th>
+                        </tr>
+                        <tr>
+                            <th>Total Weightage</th>
+                            <th>{{showResult.total_weightage}}</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-repeat="showResult in showResults" ng-if="teacher">
+            <div class="subject-view">
+                <div class="subject-title">
+                    <h4>{{showResult.name}}</h4>
+                </div>
+                <div class="subject-detail">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="studentMark in showResult.student_marks">
+                            <td>{{studentMark.student.full_name}}</td>
+                            <td class="text-center">{{studentMark.mark}}<span ng-if="showResult.enable_grade"> GPA</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="last-item"></div>
+    </ion-content>
+</ion-view>

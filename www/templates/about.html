@@ -1,0 +1,19 @@
+<ion-view view-title="About KCM">
+	<ion-content>
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+
+        <div class="item item-text-wrap">
+            <div ng-if="message.image != '' && message.image_status == '1'">
+                <img src="{{image}}" />
+            </div>
+            <div class="about-wrapper">
+                <img src="img/kcm-logo.png" />
+            </div>
+            <div ng-bind-html="message.description"></div>
+            <div ng-if="message.image != '' && message.image_status == '1'" class="last-item"></div>
+        </div>
+    </ion-content>
+</ion-view>

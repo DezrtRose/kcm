@@ -1,0 +1,36 @@
+<ion-view view-title="Login">
+    <ion-content class="login-page">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="list">
+                <div class="row" ng-if="error == 'true'">
+                    <p class="login_error">{{message}}</p>
+                </div>
+                <form name="userForm" ng-submit="submitForm(userForm)" novalidate>
+                    <div class="item item-input" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                        <input type="email" placeholder="Email" name="email" ng-model="user.email">
+                        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter Valid Email</p>
+                    </div>
+                    <div class="item item-input" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+                        <input type="{{inputType}}" placeholder="Password" name="password" ng-model="user.password">
+                        <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block"></p>
+                    </div>
+                    
+                    <div class="show-pass">
+                        <ion-checkbox style="" name="{{hideshowText}}" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPassword()">{{hideshowText}}</ion-checkbox>
+                    </div>
+
+                    <div class="btn-login">
+                        <button type="submit" class="button" ng-disabled="userForm.$invalid">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="pass-forgot">
+                    <a href="">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

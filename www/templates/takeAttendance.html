@@ -1,0 +1,29 @@
+<ion-view view-title="Attendance Taker">
+    <ion-content class="lms-attendence">
+    <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+    
+        <div class="row">
+            <div class="list">
+                <div class="item item-input item-select">
+                    <select name="subjects" ng-model="attendance.subjectName" ng-options="subject.id as subject.name for subject in subjects">
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select">
+                    <input type="date" name="date" ng-model="attendance.date" placeholder="Select Date">
+                </div>
+
+                <div class="btn-load">
+                    <button type="button" class="button" ng-click="takeAttendance()">Take Attendance</button>
+                </div>
+            </div>
+        </div>
+    <div class="row last-item">
+        <div class="attendence-list">
+            <div class="attendence-name" ng-repeat="studentAttendance in studentAttendanceList">
+                <ion-toggle ng-click="editAttendance(studentAttendance.id, studentAttendance.status)" toggle-class="toggle-calm" ng-checked="studentAttendance.status">{{studentAttendance.profile.name}}</ion-toggle>
+            </div>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

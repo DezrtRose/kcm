@@ -1,0 +1,62 @@
+<ion-view view-title="Account">
+    <ion-content class="user-account">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="col col-50 login">
+                <a class="tab-item" href="#/">
+                    <div class="user-img" ng-if="message.image_url != ''">
+                        <img ng-src="{{message.image_url}}"/>
+                    </div>
+                    <span>Hi,</span><span>{{message.first_name}}</span><span>{{message.middle_name}} {{message.last_name}}</span>
+                </a>
+            </div>
+
+            <div class="col col-50 contact">
+                <a class="tab-item" href="#/contact-us">
+                    <i class="icon ion-ios-telephone"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        
+        <ul class="learning-mgmt last-item">
+            <li>
+                <a href="#/lms">
+                    <i class="ion ion-ios-book-outline"></i>
+                    <span>Learning Management System</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/groups">
+                    <i class="ion ion-android-contacts"></i>
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li>
+                <a href="#/edit-profile">
+                    <i class="ion ion-gear-a"></i>
+                    <span>Edit Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="ion ion-heart"></i>
+                    <span ng-click="rateApp()">Rate this app</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="ion ion-chatbubble"></i>
+                    <span>Policies</span>
+                </a>
+            </li>
+            <li>
+                <a href="" ng-click="logout();">
+                    <i class="ion ion-power" ></i>
+                    <span>Log out</span>
+                </a>
+            </li>
+        </ul>
+        
+        </ion-content>
+</ion-view>

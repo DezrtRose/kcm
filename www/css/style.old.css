@@ -1,0 +1,2003 @@
+body, .ionic-body{
+    font-family: Raleway;
+    font-size: 12px;
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url("../fonts/raleway-regular-webfont.woff");
+}
+
+a{
+    text-decoration: none;
+    transition: 400ms ease;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.last-item{
+    padding-bottom: 65px !important;
+}
+
+.bar .title{
+    line-height: 54px;
+    text-align: left;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+li{
+    font-size: 12px;
+    margin-top: 10px;   
+    margin-left: 10px;
+    list-style: outside url("../img/disc.png");
+    padding-left: 5px;
+}
+
+p{
+    font-size: 12px;
+}
+
+.bar .title.title-left{
+    text-align: center;
+}
+
+.platform-android .bar .title{
+    line-height: 60px;
+}
+
+.active{
+    color: #F43341 !important;
+}
+
+table{
+    width: 100%;
+}
+
+.back-button:hover {
+    color: #444 !important;
+}
+
+.scroll-bar-v{
+    display: none;
+}
+
+.button{
+    transition: all 400ms ease 0s;
+}
+
+.button.activated,
+.button.active{
+    background: #183883;
+    color: #fff;
+}
+
+.scroll-refresher .ionic-refresher-content{
+    color: #DA251C;
+}
+
+/*==============================================================================
+=============================Header=============================================
+==============================================================================*/
+ .bar{
+    height: 55px;
+}
+
+.nav-bar-block .bar {
+    -webkit-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.45);
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.45);
+}
+
+/*==============================================================================
+=============================DASHBOARD==========================================
+==============================================================================*/
+
+.title.title-center{
+    font-size: 20px;
+}
+
+[view-title="Dashboard"] .scroll-content{
+    background: -moz-linear-gradient(45deg,  rgba(24,39,76,0.75) 0%, rgba(159,21,14,0.75) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,39,76,0.75)), color-stop(100%,rgba(159,21,14,0.75)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,39,76,0.75) 0%,rgba(159,21,14,0.75) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,39,76,0.75) 0%,rgba(159,21,14,0.75) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,39,76,0.75) 0%,rgba(159,21,14,0.75) 100%);
+    background: linear-gradient(45deg,  rgba(24,39,76,0.75) 0%,rgba(159,21,14,0.75) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf18274c', endColorstr='#bf9f150e',GradientType=1 );
+}
+
+[view-title="Dashboard"] {
+    background: url("../img/dashboard-bg.jpg") no-repeat; 
+    background-size: cover;
+}
+
+.dashboard-menu{
+    color: #fff;
+    display: block;
+    margin: 30px 0;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dashboard-menu i{
+    display: block;
+    font-size: 70px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #000;
+}
+
+/*==============================================================================
+=============================About==============================================
+==============================================================================*/
+[view-title="About KCM"] .item{
+    padding: 0;
+    border: none;
+}
+
+/*if needed to edit more for about img*/
+/*[view-title="About KCM"] img{
+}*/
+
+[view-title="About KCM"] .ng-binding{
+    padding: 20px 13px 6px;
+}
+
+[view-title="About KCM"] .ng-binding img{
+    margin: 20px 0;
+}
+
+[view-title="About KCM"] p{
+    margin: 0 0 10px;
+}
+
+.has-header{
+    top: 55px;
+}
+
+.about-wrapper{
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.about-wrapper img{
+    width: 196px;
+}
+
+/*==============================================================================
+=============================Programs===========================================
+==============================================================================*/
+.program-img-wrap{
+    position: relative;
+}
+
+.program .button-bar{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.program .button-bar .button{
+    width: auto;
+    min-height: 20px;
+    line-height: 28px;
+    margin-right: 5px;
+    font-size: 12px;
+    display: inline-block;
+    border: none;
+}
+
+.program .button-bar > .button:first-child{
+    border-radius: 0;
+}
+
+.button{
+    background: #da251c;
+    color: #fff;
+}
+
+.button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button.button-positive {
+    background-color: #fff;
+    color: #183883;
+}
+
+.button.button-positive:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.program .item{
+    border: none;
+}
+
+.program .card{
+    box-shadow: none;
+}
+
+.program p{
+    margin: 10px 0 10px;
+}
+
+.program .card,.program .list-inset{
+    background-color: #fff;
+    border-radius: 0;
+    padding: 20px 20px 65px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.program h2 {
+    color: #183883;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 27px 0 27px;
+}
+
+.program h2:first-child {
+    margin-top: 0;
+}
+
+.program table{
+    font-size: 12px;
+}
+
+.program thead {
+    background-color: #da251c;
+    color: #fff;
+}
+
+.program tr th {
+    line-height: 1;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.program tbody tr td:first-child,
+.program tbody tr td:last-child,
+.program tbody tr td:nth-child(4){
+    text-align: center;
+}
+
+.program tbody tr {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.program tbody tr td {
+    padding: 5px;
+}
+
+.program .total{
+    background: #BBBBBB;
+}
+
+.go-to-downloads {
+    width: auto;
+    display: none;
+}
+
+/*==============================================================================
+=============================About SIAM======================================
+==============================================================================*/
+.abt-siam .item{
+    padding: 0;
+    border: none;
+}
+
+.abt-siam .ng-binding{
+    padding: 20px 13px 55px;
+}
+
+.abt-siam .ng-binding img{
+    margin: 20px 0;
+}
+
+.abt-siam h3{
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.abt-siam p{
+    margin: 0 0 10px;
+}
+
+.abt-siam-logo-wrapper{
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.abt-siam-logo-wrapper img{
+    width: 196px;
+}
+
+/*==============================================================================
+=============================Admission==========================================
+==============================================================================*/
+.addmission .tsb-hscroll .button-bar{
+    display: inline-block;
+}
+
+.addmission .tsb-hscroll .button-bar .button{
+    width: auto;
+    min-height: 20px;
+    line-height: 28px;
+    margin: 0 2px 0 0;
+    font-size: 12px !important;
+    display: inline-block;
+    border: none;
+}
+
+.addmission .tsb-hscroll .button-bar > .button:first-child{
+    border-radius: 0;
+}
+
+.addmission .button.button-positive.active, .addmission .button.button-positive.activated{
+    box-shadow: none;
+}
+
+.tsb-hscroll .button{
+    background: #da251c;
+    color: #fff !important;
+}
+
+.tsb-hscroll .button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.tsb-hscroll .button.button-positive {
+    background-color: #fff;
+    color: #183883 !important;
+}
+
+.tsb-hscroll .button.button-positive:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.tabbed-slidebox .tsb-icons::after{
+    display: none;
+}
+
+.tsb-icons {
+    display: block;
+    left: -40px;
+    position: absolute;
+    top: -44px;
+}
+
+.addmission-img-wrap{
+    position: relative;
+}
+
+.addmission .item{
+    border: none;
+}
+
+.addmission .card{
+    box-shadow: none;
+}
+
+.addmission .card,
+.addmission .list-inset{
+    background-color: #fff;
+    border-radius: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.addmission .card.last-item{
+    padding-bottom: 70px;
+}
+
+.addmission h3,
+.addmission h2{
+    font-size: 12px;
+    font-weight: bold;
+    color: #183883;
+    margin: 20px 0 8px;
+}
+
+.addmission p{
+    margin-bottom: 10px;
+}
+
+.addmission .button_images a {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.addmission .button-bar > .button:last-child{
+    border-radius: 0;
+}
+
+.addmission .button_images a img {
+    width: auto;
+}
+
+.addmission .disable-user-behavior .list{
+    padding-bottom: 65px;
+}
+
+.addmission-downloads{
+    width: 100%;
+    background: #183883;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+
+.addmission-downloads .ion-ios-download-outline::before {
+    font-size: 25px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.addmission-downloads:active,.addmission-downloads:hover,.addmission-downloads:focus{
+    background: #DA251C;
+}
+
+.addmission .tabbed-slidebox .slider {
+    height: auto;
+}
+
+.tabbed-slidebox .tsb-icons .scroll a.active{
+    font-size: 14px;
+    border: none;
+}sad
+
+/*==============================================================================
+=============================News & Events======================================
+==============================================================================*/
+.news-event{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+
+}
+
+.news-event .item{
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.news-event li{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.news-event a{
+    color: #fff;
+}
+
+.news-event p{
+    margin: 0;
+    color: #b2b2b2;
+}
+
+.news-bg ul li{
+    margin-bottom: 20px;
+}
+
+.news-event-des-wrap{
+    background: rgba(24, 56, 131, 0.2);
+    margin: -6px 0 20px;
+    padding: 10px;
+}
+
+/*==============================================================================
+=============================News & Events Detail===============================
+==============================================================================*/
+.news-event-detail .item{
+    padding: 0;
+    border: none;
+}
+
+.news-event-detail h4{
+    font-size: 18px;
+    padding: 0 0 16px;
+    margin: 0 0 20px;
+    border-bottom: 2px solid #000;
+}
+
+.content-wrap{
+    padding: 20px;
+}
+
+/*==============================================================================
+=============================Gallery & Photo Gallery============================================
+==============================================================================*/
+.gallery{
+    padding: 20px 20px 55px 20px;
+}
+
+.gallery, .photo-gallery{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+
+}
+
+.gallery li,
+.photo-gallery li{
+    display: inline-block;
+    margin: 0;
+}
+
+.photo-gallery .item,
+.gallery a .item{
+    height: 126px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.gallery .item{
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+.gallery img,
+.photo-gallery img{
+    max-width: 100%; 
+    display: block;
+    transform: scale(3);
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    overflow: hidden;
+}
+
+.gallery .caption{
+    height: 50px;
+    background: rgba(24, 56, 131, 0.2);
+    padding: 5px;
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    line-height: 20px;
+}
+    
+.gallery .list {
+    padding-bottom: 75px;
+}
+
+.gallery .item-accordion .col{
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+.gallery span{
+    color: #fff;
+}
+
+.gallery .item.item-stable{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.gallery .item.item-stable:last-child{
+    border-bottom: none;
+}
+
+.gallery .item.active.item-stable, 
+.gallery .item.activated.item-stable {
+    background-color: transparent;
+    border: medium none;
+}
+
+.gallery .item-accordion {
+    margin-bottom: 20px;
+}
+
+.gallery .col{
+    padding: 0 10px 0 0;
+}
+
+.gallery .col:last-child{
+    padding: 0;
+}
+
+.gallery .ion-plus::before{
+    float: right;
+}
+
+.gallery .ion-minus::before{
+    float: right;
+}
+
+.gallery .active{
+    color: #fff !important;
+}
+
+.gallery .item-accordion.last-item.item {
+    white-space: normal;
+}
+
+.modal-backdrop-bg{
+    background: rgb(24, 56, 131) !important;
+}
+
+.photo-gallery h3{
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/*==============================================================================
+=============================Map================================================
+==============================================================================*/
+.map-wrap{
+    width: 100%;
+    height: 340px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.map-kcm-wrapper{
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.map-kcm-wrapper img{
+    width: 196px;
+}
+
+.map-kcm-wrapper h5{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.map-kcm-wrapper span{
+    font-size: 15px;
+}
+
+/*==============================================================================
+===============================Login============================================
+==============================================================================*/
+.login-page{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.login-page .row{
+    padding: 10px 20px 0;
+}
+
+.login-page .list{
+    width: 100%;
+}
+
+.login-page .item{
+    color: #fff;
+    background: transparent;    
+    border: none;
+}
+
+.login-page input[type="text"]{
+    padding-left: 0;
+}
+
+.login-page .item input{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 15px;
+}
+
+.login-page .item-input{
+    padding: 6px 0 5px;
+}
+
+.login-page input::-moz-placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.login-page .item.item-checkbox {
+    font-size: 11px;
+    padding: 10px 20px;
+}
+
+.login-page .item.item-checkbox .checkbox{
+    left: 0;
+    padding: 7px 0;
+    margin-top: -12px
+}
+
+.login-page .checkbox-icon{
+    width: 12px;
+    height: 12px;
+}
+
+.login-page .checkbox-icon::before{
+    background: transparent;
+    border-radius: 0;
+}
+
+.show-pass.checkbox input:checked::before, 
+.show-pass .checkbox input:checked + .checkbox-icon::before{
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid;
+    box-shadow: 0 0 2px inset;
+}
+
+.show-pass .checkbox input::after, .show-pass .checkbox-icon::after{
+    width: 9px;
+    left: 1px;
+    top: 2px;
+}
+
+.btn-login{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.btn-login button{
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    line-height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #da251c;
+    color: #fff;
+}
+
+.pass-forgot{
+    width: 100%;
+    text-align: center;
+}
+
+.pass-forgot a{
+    color: #fff;
+    font-size: 12px;
+}
+
+.pass-forgot a:focus,
+.pass-forgot a:active{
+    color: #3f5a95;
+}
+
+.login-page .help-block {
+    background: transparent none repeat scroll 0 0;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.list .row {
+    padding: 0;
+}
+
+/*==============================================================================
+=============================Account============================================
+==============================================================================*/
+
+.account{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.account .tab-item{
+    font-size: 14px;
+    opacity: 1;
+    max-width: 100%;
+    text-align: center;
+    line-height: 34px;
+}
+
+.account .row{
+    padding: 0;
+}
+
+.login{
+    background: rgba(218, 37, 28, .2);
+    padding: 40px 0 40px;
+}
+
+.contact{
+    background: rgba(24, 56, 131, .2);
+    padding: 40px 0 40px;
+}
+
+.account .ion-ios-telephone,
+.account .ion-android-contact{
+    font-size: 70px;
+    margin-bottom: 45px;
+}
+
+.rate{
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0 20px;
+}
+
+.rate .ion-heart::before{
+    font-size: 20px;
+}
+
+.rate .tab-item .icon{
+    display: inline-block;
+}
+
+.rate a {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.rate  span {
+    font-size: 15px;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.rate .icon.ion-heart {
+    line-height: 21px;
+    vertical-align: middle;
+}
+
+.policy{
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 0 20px;
+}
+
+.policy .ion-chatbubble::before{
+    font-size: 20px;
+}
+
+.policy .tab-item .icon{
+    display: inline-block;
+}
+
+.policy a {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+.policy  span {
+    font-size: 15px;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.policy .icon.ion-chatbubble {
+    line-height: 21px;
+    vertical-align: middle;
+}
+
+/*==============================================================================
+=============================User Account=======================================
+==============================================================================*/
+
+.user-account{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.user-account .tab-item{
+    font-size: 14px;
+    opacity: 1;
+    max-width: 100%;
+    text-align: center;
+    line-height: 34px;
+}
+
+.user-account .row{
+    padding: 0;
+}
+
+.user-account .login{
+    background: rgba(218, 37, 28, .2);
+    padding: 30px 0 40px;
+}
+
+.user-account .login span{
+    background: #da251c;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px;
+    margin-right: 2px;
+    margin-top: 12px;
+}
+
+.user-account .contact{
+    background: rgba(24, 56, 131, .2);
+    padding: 40px 0 40px;
+}
+
+.user-account .contact .ion-ios-telephone{
+    font-size: 70px;
+    margin-bottom: 45px;
+}
+
+.user-account .row + .row {
+    padding: 20px !important;
+}
+
+.learning-mgmt{
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.learning-mgmt li{
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.learning-mgmt li:last-child {
+    border: medium none;
+}
+
+.learning-mgmt a:active {
+    color: #2247a1;
+}
+
+.learning-mgmt i {
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.learning-mgmt a{
+    color: #fff;
+}
+
+.user-img{
+    width: 90px;
+    height: 90px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.user-img img{
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    transform: scale(2);
+}
+
+/*==============================================================================
+=============================Edit Profile=======================================
+==============================================================================*/
+
+.edit-profile .item {
+    border: none;
+    margin: 0;
+}
+
+.edit-profile .row{
+    padding: 20px 20px 0;
+}
+
+.edit-profile label {
+    padding: 0;
+    border-bottom: 1px solid #000 !important;
+}
+
+.edit-profile .input-label {
+    color: #da251c;
+    font-size: 10px;
+}
+
+.edit-profile input {
+    color: #183883;
+    font-size: 15px;
+}
+
+.btn-save{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-save button{
+    width: 170px;
+    height: 30px;
+    min-height: 30px;
+    line-height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #da251c;
+    color: #fff;
+}
+
+/*==============================================================================
+=============================Contact Us=========================================
+==============================================================================*/
+.contact-us{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.contact-us .row{
+    padding: 20px 20px 0;
+}
+
+.contact-title{
+    display: block;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.contact-us h4{
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.contact-title h5{
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.contact-title span{
+    font-size: 10px;
+}
+
+.contact-detail {
+    border-bottom: 1px solid #fff;
+    padding: 0 0 10px;
+}
+
+.contact-us .ion{
+    font-size: 16px;
+    padding-right: 5px;
+    vertical-align: bottom;
+}
+
+.contact-detail > span {
+    display: block;
+}
+
+.contact-us .list .item{
+    background: transparent;
+    border: none;
+}
+
+.contact-us .list .item input{
+    color: #fff;
+}
+
+.contact-us .list .item textarea{
+    color: #fff;
+    font-size: 14px;
+    background: transparent;
+}
+
+.contact-us .list .item-input{
+    font-size: 14px;
+    padding: 6px 0 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.contact-us input::-moz-placeholder, .contact-us textarea::-moz-placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.contact-us ::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+.btn-send{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-send button{
+    width: 100%;
+    height: 30px;
+    min-height: 30px;
+    line-height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #da251c;
+    color: #fff;
+}
+
+/*==============================================================================
+=============================LMS================================================
+==============================================================================*/
+.wel-lms{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.wel-lms .row{
+    padding: 0;
+}
+
+.wel-lms .tab-item{
+    max-width: 100%;
+    text-align: center;
+    opacity: 1;
+}
+
+.attendence {
+    background: rgba(218, 37, 28, 0.2);
+    padding: 50px;
+}
+
+.attendence .ion-eye,
+.ion-ios-compose-outline,
+.ion-ios-book{
+    font-size: 65px !important;
+    margin-bottom: 50px !important;
+}
+
+.apply-leave {
+    background: rgba(24, 56, 131, 0.2);
+    padding: 50px;
+}
+
+.subjects{
+    background: rgba(24, 56, 131, 0.2);
+    padding: 50px;
+}
+
+.wel-lms .row + .row{
+    margin: 0;
+}
+
+/*==============================================================================
+=============================LMS My Subject=====================================
+==============================================================================*/
+.my-subject .item-input,
+.my-subject .item{
+    padding: 0;
+}
+
+.my-subject .row{
+    padding: 10px 20px 0;
+}
+
+.my-subject .list{
+    width: 100%;
+}
+
+.my-subject .item{
+    width: 100%;
+    height: 30px;
+    border: none;
+    margin: 0;
+}
+
+.my-subject .item-select{
+    border-bottom: 1px solid #000;
+    padding: 0 0 5px;
+    margin-bottom: 5px;
+}
+
+.my-subject .item-select select{
+    width: 100%;
+    max-width: 100%;
+    color: #183883;
+    padding: 0;
+    position: relative;
+    direction: ltr;
+}
+
+.my-subject .item-select::after{
+    color: #183883;
+    right: 0;
+}
+
+.my-subject .row + .row{
+    margin: 0;
+}
+
+.subject-view{
+    width: 100%;
+}
+
+.subject-detail{
+    background: #f2f2f2;
+    margin: 20px 0 0;
+    padding: 15px 10px;
+}
+
+.my-subject table{
+    padding: 16px 10px;
+}
+
+.my-subject table thead{
+    border-bottom: 1px solid #da251c;
+    color: #da251c;
+}
+
+.my-subject table thead th:first-child{
+    text-align: left;
+}
+
+.my-subject table thead th{
+    padding: 5px;
+}
+
+.my-subject table tbody tr{
+    border-bottom: 1px solid #000;
+}
+
+.my-subject table tbody tr:last-child {
+    border-bottom: medium none;
+}
+
+.my-subject table tbody td{
+    padding: 5px;
+}
+
+.btn-load{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.btn-load button{
+    width: 185px;
+    height: 30px;
+    min-height: 30px;
+    line-height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #da251c;
+    color: #fff;
+}
+
+.subject-title h4{
+    color: #e8251b;
+    display: block;
+    margin: 0;
+    font-weight: 200;
+}
+
+.subject-title span{
+    color: #7380a9;
+    font-size: 10px;
+}
+
+/*==============================================================================
+==============================LMS Atendence=====================================
+==============================================================================*/
+.lms-attendence .item-input,
+.lms-attendence .item{
+    padding: 0;
+}
+
+.lms-attendence .row{
+    padding: 10px 20px 0;
+}
+
+.lms-attendence .list{
+    width: 100%;
+}
+
+.lms-attendence .item{
+    width: 100%;
+    height: 30px;
+    border: none;
+    margin: 0;
+}
+
+.lms-attendence .item-select{
+    border-bottom: 1px solid #000;
+    padding: 0 0 5px;
+    margin-bottom: 5px;
+}
+
+.lms-attendence .item-select select{
+    width: 100%;
+    max-width: 100%;
+    color: #183883;
+    padding: 0;
+    position: relative;
+    direction: ltr;
+}
+
+.lms-attendence .item-select::after{
+    color: #183883;
+    right: 0;
+}
+
+.lms-attendence .row + .row{
+    margin: 0;
+}
+
+.present{
+    background: rgb(24, 56, 131);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 10px 10px;
+}
+
+.present-title{
+    font-size: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.present-day{
+    font-size: 30px;
+    padding: 20px 20px 20px 15px;
+    display: block;
+}
+
+.absent{
+    background: rgb(218, 37, 28);
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px 10px 0;
+}
+
+.absent-title{
+    font-size: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.absent-day{
+    font-size: 30px;
+    padding: 20px 15px 20px 20px;
+    display: block;
+}
+
+.date {
+    width: 200px;
+    display: block;
+    text-align: center;
+    margin: 15px 0 15px auto;
+}
+
+.date input{
+    height: auto;
+    line-height: 30px;
+    padding: 15px;
+    background: red;
+}
+
+/*==============================================================================
+==================================LMS Leave=====================================
+==============================================================================*/
+.lms-leave .item-input,
+.lms-leave .item{
+    padding: 0;
+}
+
+.lms-leave .row{
+    padding: 10px 20px 0;
+}
+
+.lms-leave .list{
+    width: 100%;
+}
+
+.lms-leave .item{
+    width: 100%;
+    border: 1px solid #000;
+    margin: 0;
+}
+
+.lms-leave textarea{
+    padding: 10px;
+}
+
+/*==============================================================================
+==============================Group Main========================================
+==============================================================================*/
+
+.group-main-wrap{
+    width: 100%;
+    height: 100%;
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.group-head {
+    padding: 20px;
+    position: relative;
+}
+
+.group-head a{
+    color: #fff;
+    display: block;
+}
+
+.group-head .tab-item{
+    margin: 0;    
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.group-head .ion.ion-android-contacts {
+    display: inline-block;
+    font-size: 35px;
+    vertical-align: middle;
+}
+
+.group-search-tab,
+.group-create-tab{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 13px;
+    vertical-align: middle;
+}
+
+.group-search-tab span,
+.group-create-tab span{
+    display: block;
+}
+
+.seprate {
+    background: #fff;
+    content: "";
+    height: 30px;
+    position: absolute;
+    left: 46%;
+    top: 26px;
+    transform: rotate(20deg);
+    width: 1px;
+}
+
+.group-head .ion.ion-ios-search,
+.group-head .ion-ios-plus-outline{
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.group-head .col.col-50:last-child {
+    padding-left: 15px;
+}
+
+/*==============================================================================
+=============================Group Create=======================================
+==============================================================================*/
+.group-create .row{
+    padding: 0 20px;
+}
+
+.group-create-head {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.group-create-head span{
+    color: #183883;
+    display: inline-block;
+    font-size: 15px;   
+    cursor: default !important;
+}
+
+.group-create-head .ion-android-contacts, .group-create-head .ion-android-contacts {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.group-create-detail{
+    padding: 0 20px;
+}
+
+.group-create-detail h5{
+    color: #183883;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.group-create-detail h5 a{
+    color: #e47774;
+    font-size: 10px;
+    text-decoration: none;
+    float: right;
+    line-height: 16px;
+}
+
+.group-create-detail .item-input {
+    width: 100%;
+    height: 30px;
+    color: #183883;
+    border: medium none;
+    padding: 0 0 3px;
+    font-size: 14px;
+}
+
+.group-create-detail span.item {
+    border-bottom: 1px solid #000 !important;
+}
+
+.group-create-detail .item.item-input input {
+    color: #183883;
+}
+
+.group-create-detail .ion-ios-search-strong.placeholder-icon {
+    color: #183883;
+}
+
+.btn-create{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.btn-create button{
+    width: 170px;
+    height: 30px;
+    min-height: 30px;
+    line-height: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #da251c;
+    color: #fff;
+}
+
+/*==============================================================================
+===============================Group Feed=======================================
+==============================================================================*/
+.group-feed{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.group-feed-wrap{
+    padding: 10px 20px;
+}
+
+.group-feed-wrap .ion-android-contacts{
+    display: inline-block;
+     font-size: 40px;
+}
+
+.group-title-wrap{
+    display: inline-block;
+    margin: 0 14px;
+}
+
+.group-title{
+    display: block;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.followers{
+    display: block;
+    font-size: 10px;
+}
+
+.group-feed-wrap a {
+    color: #fff;
+}
+
+.btn-follow{
+    margin:  0;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0 0;
+}
+
+.btn-follow button{
+    background: #da251c none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    height: 25px;
+    line-height: 5px;
+    min-height: 13px;
+    width: 75px;
+}
+
+/*==============================================================================
+=============================Group Invite=======================================
+==============================================================================*/
+.group-invite-friend-wrap{
+    padding: 20px;
+}
+
+.group-invite-friend-wrap h4{
+    color: #183883;
+    margin-top: 0; 
+}
+
+.group-invite-friend-wrap .item {
+    border: medium none;
+    height: 30px;
+    padding-left: 0;
+}
+
+.group-invite-friend-wrap .ion-ios-search-strong.placeholder-icon {
+    color: #183883;
+}
+
+.added-list{
+    background: rgb(231, 235, 242);
+    padding: 15px;
+}
+
+.added-list ul{
+    margin: 0;
+}
+
+.added-list ul li{
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.added-list ul li:last-child{
+    margin-bottom: 0;
+}
+
+.added-list .user-img{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.added-list .user-img img{
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    transform: scale(2);
+}
+
+.user-name{
+    color: #4d6097;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/*==============================================================================
+=============================Notification=======================================
+==============================================================================*/
+.notification{
+    background: rgb(24,40,76);
+    background: -moz-linear-gradient(45deg,  rgba(24,40,76,1) 0%, rgba(159,20,14,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(24,40,76,1)), color-stop(100%,rgba(159,20,14,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    background: linear-gradient(45deg,  rgba(24,40,76,1) 0%,rgba(159,20,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18284c', endColorstr='#9f140e',GradientType=1 );
+    color: #fff;
+}
+
+.notification-tittle {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.notification-content{
+    margin: 0;
+    color: rgba(255,255,255,.5);
+}
+
+.notification-time{
+    color: rgba(255,255,255,.3);
+    font-size: 10px;
+}
+
+.notification li{
+    background: rgba(218,37,28,.2);
+    list-style: none;
+    margin: 0 0 2px;
+    padding: 12px 20px;
+}
+
+/*==============================================================================
+=============================Create post========================================
+==============================================================================*/
+.create-post-wrap{
+    padding: 20px;
+}
+
+.create-post-wrap h4{
+    color: #183883;
+    margin-top: 0; 
+}
+
+.post-upload-img{
+    background: #e7ebf2;
+    padding: 15px;
+    text-align: center;
+}
+
+.post-upload-img .ion-ios-upload-outline{
+    display: block;
+    font-size: 25px;
+}
+
+.post-text{
+    border: 1px solid #183883;
+}
+
+.post-text textarea{
+    color: #2d4a8e;
+}
+
+.post-text input::-moz-placeholder, .post-text textarea::-moz-placeholder {
+    color: #2d4a8e !important;
+    opacity: 1;
+}
+
+
+/*==============================================================================
+=============================Social=============================================
+==============================================================================*/
+
+.action-sheet-title{
+    background: #183883 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.action-sheet .button{
+    color: #8f8f8f !important;
+}
+
+.ion-social-facebook{
+    color: #183883;
+}
+
+.ion-social-twitter{
+    color: #28abe3;
+}
+
+.ion-social-linkedin{
+    color: #007abb;
+}
+
+.ion-social-youtube{
+    color: #e5523e;
+}
+
+.action-sheet-cancel .button.ng-binding {
+    background: #da251c none repeat scroll 0 0;
+    color: #fff;
+}
+
+.action-sheet-group{
+    border-radius: 0;
+}
+
+.action-sheet-cancel .button {
+    color: #fff !important;
+}
+
+.platform-android .action-sheet .action-sheet-title{
+    text-align: center !important;
+    color: #fff;
+    font-weight: bold;
+}
+
+.action-sheet .button{
+    font-size: 14px;
+}
+
+/*==============================================================================
+=============================Footer=============================================
+==============================================================================*/
+
+.bar-footer{
+    border: none;
+    box-shadow: 0 0 2px -1px;
+}
+
+.bar.bar-footer .tab-item{
+    line-height: 0px;
+}
+
+.bar.bar-footer .tab-item .icon {
+    font-size: 20px;
+}
+
+.bar-footer .tabs{
+    border-top: none;
+    top: 0;
+    left: 0;
+    padding: 10px 0 0;
+}
+
+/*============Acordian====================*/
+.tab-item{
+    font-family: Raleway;
+    font-size: 12px;
+}
+
+.bar-footer .tabs{
+    background-color: #fff;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+.transparent {
+  background: transparent !important;
+}
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+.tsb-icons .slider{
+    padding-bottom: 65px;
+}
+
+p.info {
+  position: absolute;
+  bottom: 55px;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* Fix modal backdrop for smaller devices */
+@media (max-width: 679px) {
+  .active .modal-backdrop-bg {
+    opacity: .6;
+  }
+  .modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+  }
+}
+
+/*Spinner*/
+
+.scroll{
+    position: relative;
+}
+
+.spinner svg {
+  width: 19% !important;
+  height: 85px !important;
+  stroke: #387EF5;
+  fill: #387EF5;
+}
+
+.spinner.spinner-assertive{
+    left: 40%;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 99;
+}

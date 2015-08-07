@@ -1,0 +1,36 @@
+<ion-view view-title="Gallery">
+	<ion-content class="padding gallery">
+		<div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <ion-list>
+			<div ng-repeat="gall in message">
+			  	<ion-item class="item-stable"
+			            ng-click="toggleGroup({{gall.year}})"
+			            ng-class="{active: isGroupShown({{gall.year}})}">
+					<i class="icon" ng-class="isGroupShown({{gall.year}}) ? 'ion-minus' : 'ion-plus'"></i>
+				    &nbsp;
+				    {{gall.year}}
+			  	</ion-item>
+			  	<div ng-if="errors" class="offlinerror">
+					<p>{{errorMessage}}</p>
+				</div>
+			  	<ion-item class="item-accordion last-item"
+				            ng-show="isGroupShown({{gall.year}})"
+				            ng-if="message1">
+		            <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus1"></ion-spinner>
+		            <div class="col col-50"
+                            ng-repeat="album in message1">
+                        <a href="#/albums/{{album.year}}/{{album.album_alias}}">
+                            <ion-item ng-if="album.cover_image != ''">
+                                <img src="{{baseUrl}}{{album.cover_image}}"/>
+                            </ion-item>
+                            <div class="caption">{{album.album_name}}</div>
+                        </a>
+			       </div>
+			  </ion-item>
+			</div>
+		</ion-list>
+	</ion-content>
+</ion-view>

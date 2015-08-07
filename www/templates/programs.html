@@ -1,0 +1,45 @@
+<ion-view view-title="Programs">
+    <ion-content class="has-header program">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <img src="{{baseUrl}}upload/{{message[0].mobile_img}}" />
+        <tab-slide-box tab="0">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <div class="button-bar">
+                            <!--                            <a href="javascript:void(0);" ng-repeat="progs in message" class="button {{progs.buttonClass}}" on-finish-render="test()" ng-click="slideHasChanged($index)">
+                                                        {{progs.content_title}}
+                                                        </a>-->
+                            <a href="javascript:;" class="button button-positive active" ng-repeat="progs in message" on-finish-render="test()">
+                                {{progs.content_title}}
+                            </a>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide>
+                    <ion-scroll style="height: 100%" delegate-handle="slide1Scroll">
+                        <div class="card item item-text-wrap last-item" ng-bind-html="BBAF"></div>
+                        <div class="last-item-more"></div>
+                    </ion-scroll>
+                </ion-slide>
+                <ion-slide>
+                    <ion-scroll style="height: 100%" delegate-handle="slide1Scroll">
+                        <div class="card item item-text-wrap last-item" ng-bind-html="BBAM"></div>
+                        <div class="last-item-more"></div>
+                    </ion-scroll>
+                </ion-slide>
+                <!--<ion-slide ng-repeat="progs in message">
+                    <ion-scroll style="height: 100%" delegate-handle="slide1Scroll">
+                        <div class="card item item-text-wrap last-item" ng-bind-html="progs.description"></div>
+                        <div class="last-item-more"></div>
+                    </ion-scroll>
+                </ion-slide>-->
+            </ion-slide-box>
+        </tab-slide-box>
+    </ion-content>
+</ion-view>

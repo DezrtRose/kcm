@@ -1,0 +1,76 @@
+<ion-view view-title="View Attendance">
+    <ion-content class="lms-attendence">
+    <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+
+        <div class="row">
+            <div class="list">
+                <div class="item item-input item-select" ng-if="student">
+                    <select name="subjects" ng-model="attendance.subjectName" ng-options="subject.subject_name as subject.name for subject in subjects">
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select" ng-if="teacher">
+                    <select name="subjects" ng-model="attendance.subjectName" ng-options="subject.id as subject.name for subject in subjects">
+                        <option value="">Select Subject</option>
+                    </select>
+                </div>
+                <div class="item item-input">
+                    <label>Subject Status</label>
+                    <div class="radio-wrap">
+                        <ion-radio ng-click="subjectTypeChange('Active')">Active</ion-radio>
+                        <ion-radio ng-click="subjectTypeChange('Inactive')">Inactive</ion-radio>
+                    </div>
+                </div>
+
+                <div class="btn-load">
+                    <button type="button" class="button" ng-click="filterAttendance()">Load Result</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row" ng-if="student">
+            <div class="col col-50 present">
+                <span class="present-title">Total days present</span>
+                <span class="present-day">{{presentAttendance}}</span>
+            </div>
+            <div class="col col-50 absent">
+                <span class="absent-title">Total days absent</span>
+                <span class="absent-day">{{absentAttendance}}</span>
+            </div>
+        </div>
+    
+        <div class="row view-list-wrap last-item" ng-if="teacher">
+                <ion-list>
+                    <div ng-repeat="studentAttendance in teacherAttendance">
+                        <div class="view-list">
+                            <ion-item class="item-stable"
+                                    ng-click="toggleGroup(studentAttendance)"
+                                    ng-class="{active: isGroupShown(studentAttendance)}">
+                              <i class="icon" ng-class="isGroupShown(studentAttendance) ? 'ion-chevron-up' : 'ion-chevron-down'"></i>
+                              <span>{{studentAttendance.attendance.student_detail.full_name}}</span>
+                          </ion-item>
+                        </div>
+                        
+                        <div class="attendance-all">
+                            <ion-item class="item-accordion"
+                                  ng-show="isGroupShown(studentAttendance)">
+                                <div class="total-present-day">
+                                    <span>P:</span>
+                                    <span class="days-present">
+                                        {{studentAttendance.attendance.student_attendance.present_days}}
+                                    </span>
+                                </div>
+                                <div class="total-absent-day">
+                                    <span>A:</span>
+                                    <span class="days-absent">
+                                        {{studentAttendance.attendance.student_attendance.absent_days}}
+                                    </span>
+                                </div>
+                            </ion-item>
+                        </div>
+                        
+                    </div>
+                </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view view-title="Admission">
+	<ion-content class="has-header addmission">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+            
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <img src="{{baseUrl}}upload/{{message[0].mobile_img}}" />
+        <tab-slide-box tab="0">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <div class="button-bar">
+                            <a href="javascript:;" class="button button-positive" ng-repeat="progs in message" on-finish-render="test()">
+                                {{progs.content_title}}
+                            </a>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide>
+                    <ion-scroll style="height:100%" delegate-handle="slide1Scroll" >
+                        <div class="card item item-text-wrap last-item" ng-bind-html="AI"></div>
+                        <div class="card item item-text-wrap" ng-if="netStatus">
+                            <h2>Downloads</h2>
+                        </div>
+                        <ion-items>
+                            <ion-item ng-repeat="ftitle in arrString track by $index">
+                                <a class="addmission-downloads"  ng-click="download_file('{{baseUrl}}{{ftitle}}')" target="_blank">{{arrString1[$index]}} <i class="ion-ios-download-outline"></i></a>
+                            </ion-item>
+                        </ion-items>
+                        <div class="last-item-more"></div>
+                    </ion-scroll>
+                </ion-slide>
+                <ion-slide>
+                    <ion-scroll style="height:100%" delegate-handle="slide1Scroll" >
+                        <div class="card item item-text-wrap last-item" ng-bind-html="KCMS"></div>
+
+                        <div class="card item item-text-wrap" ng-if="netStatus">
+                            <h2>Downloads</h2>
+                        </div>
+                        <ion-items class="last-item-more">
+                            <ion-item ng-repeat="ftitle in arrString track by $index">
+                                <a class="addmission-downloads"  ng-click="download_file('{{baseUrl}}{{ftitle}}')" target="_blank">{{arrString1[$index]}} <i class="ion-ios-download-outline"></i></a>
+                            </ion-item>
+                        </ion-items>
+                        <div class="last-item-more"></div>
+                    </ion-scroll>
+                </ion-slide>
+            </ion-slide-box>
+        </tab-slide-box>
+	</ion-content>
+</ion-view>

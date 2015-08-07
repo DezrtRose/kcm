@@ -1,0 +1,32 @@
+<ion-view view-title="Groups">
+    <ion-content class="group-feed">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="group-feed-wrap last-item">
+            <i class="ion ion-android-contacts"></i>
+            <div class="group-title-wrap">
+                <span class="group-title">KCM Business discussion</span>
+                <span class="followers">200 following</span>
+            </div>
+            <div class="btn-follow">
+                <button class="button">
+                    Following
+                </button>
+            </div>
+            
+            <ul>
+                <li ng-repeat="news in message">
+                    <a href="#/news-detail/{{news.content_alias}}">
+                    <ion-item ng-if="news.image != '' && news.image_status == '1'">
+                            <img src="{{baseUrl}}{{news.image}}" />
+                        </ion-item>
+                        <div class="news-event-des-wrap">
+                            <span>{{news.content_title}}</span>
+                            <p ng-bind-html="news.short_description"></p>
+                        </div>
+                    </a>
+                    <!-- <span>{{news.created_at | date:'medium'}}</span> -->
+                </li>
+            </ul>
+        </div>        
+    </ion-content>
+</ion-view>

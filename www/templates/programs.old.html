@@ -1,0 +1,79 @@
+<ion-view view-title="Programs">
+    <ion-content class="has-header program">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div>
+            <img src="{{baseUrl}}upload/{{message[0].mobile_img}}" />
+        </div>
+        <tab-slide-box tab="0">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <a href="javascript:void(0);" ng-repeat="progs in message" class="button {{progs.buttonClass}}" on-finish-render="test()" ng-click="slideHasChanged($index)">
+                            {{progs.content_title}}
+                        </a>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide ng-repeat="progs in message">
+                    <ion-content>
+                        <div class="card item item-text-wrap last-item" ng-bind-html="progs.description"></div>
+                    </ion-content>
+                </ion-slide>
+            </ion-slide-box>
+        </tab-slide-box>
+        <!-- <ion-content scroll="false">
+            <tab-slide-box tab="0">
+                <div class="tsb-icons">
+                    <div class="tsb-ic-wrp">
+                        <div class="program-img-wrap">
+                            <ion-slide-box show-pager="false">
+                                <ion-slide ng-repeat="progs in message" ng-show="progs.isVisible">
+                                    <img src="{{baseUrl}}upload/{{progs.mobile_img}}" />
+                                </ion-slide>
+                            </ion-slide-box>
+                            <div class="tsb-ic-wrp">
+                                <ion-scroll direction="x" class="tsb-hscroll button-bar">
+                                    <a href="javascript:void(0);" ng-repeat="progs in message"
+                                       class="button {{progs.buttonClass}}" on-finish-render="test()" ng-click="slideHasChanged($index)">
+                                        {{progs.content_title}}
+                                    </a>
+                                </ion-scroll>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ion-slide-box show-pager="false"
+                               on-slide-changed="slideHasChanged($index)">
+                    <ion-slide ng-repeat="progs in message">
+                        <ion-scroll style="height:100%" delegate-handle="slide1Scroll" >
+                            <div class="card item item-text-wrap last-item" ng-bind-html="progs.description"></div>
+                        </ion-scroll>
+                    </ion-slide>
+                </ion-slide-box>
+            </tab-slide-box>
+        </ion-content> -->
+
+        <!-- <div class="program-img-wrap">
+            <img ng-repeat="progs in message"
+                    ng-show="progs.isVisible"
+                    src="{{baseUrl}}upload/{{progs.mobile_img}}" />
+            <div class="button-bar">
+                <a ng-repeat="progs in message"
+                    class="button {{progs.buttonClass}}"
+                    ng-click="switchTab({{progs.id}})">
+                    {{progs.content_title}}
+                </a>
+            </div>
+            
+        </div>
+        <div class="card item item-text-wrap last-item"
+            ng-show="progs.isVisible"         
+            ng-repeat="progs in message"
+            ng-bind-html="progs.description"> 
+        </div> -->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view view-title="Contact Us">
+    <ion-content class="contact-us">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+           <div class="col col-9">
+                <div class="contact-title">
+                    <h5> {{message.site_title}} </h5>
+                    <span> {{message.site_location}} </span>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col col-9">
+                <div class="contact-detail">
+                <span><i class="ion ion-ios-telephone"></i> {{message.site_phone}} </span>
+                <span><i class="ion ion-printer"></i> {{message.site_fax}} </span>
+                <span><i class="ion ion-email"></i> {{message.site_email}} </span>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col col-9">
+                <form name="contactForm" ng-submit="submitForm(contactForm)" novalidate>
+                    <div class="list">
+                        <h4>Send Your Feedback</h4>
+                        <label class="item item-input">
+                          <input type="text" placeholder="Name" name="name" ng-model="contact.name" required="">
+                            <p ng-show="contactForm.name.$error.required && !contactForm.name.$pristine" class="help-block">Tell us you name</p>
+                        </label>
+                        <label class="item item-input">
+                          <input type="email" placeholder="Email" name="email" ng-model="contact.email" required="">
+                            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter Valid Email</p>
+                        </label>
+                        <label class="item item-input">
+                          <textarea name="message" ng-model="contact.message" placeholder="Comments" rows="6" cols="1" required=""></textarea>
+                            <p ng-show="contactForm.message.$error.required && !contactForm.message.$pristine" class="help-block">What is your message</p>
+                        </label>
+                        <div class="btn-send last-item">
+                            <button class="button" ng-disabled="contactForm.$invalid">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

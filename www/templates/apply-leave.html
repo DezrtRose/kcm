@@ -1,0 +1,20 @@
+<ion-view view-title="Apply Leave">
+    <ion-content class="lms-leave">
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="row">
+            <div class="list">
+                
+                <div class="date">
+                    <input type="date" placeholder="Date" value="mm dd yyyy"/>
+                </div>
+                
+                <div class="item item-input">
+                    <textarea placeholder="Your reason for leave..." rows="10" cols="1"></textarea>
+                </div>
+                <div class="btn-load">
+                    <button class="button">Apply Leave</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

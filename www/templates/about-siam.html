@@ -1,0 +1,17 @@
+<ion-view view-title="About Siam">
+	<ion-content class="abt-siam">
+        <div ng-if="netStatus">
+            <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()"></ion-refresher>
+        </div>
+        <ion-spinner icon="ripple" class="spinner-assertive" ng-show="loadingStatus"></ion-spinner>
+        <div class="item item-text-wrap">
+            <div class="abt-siam-logo-wrapper">
+                <img src="img/siam-logo.png" />
+            </div>
+            
+            <ion-item ng-if="message.image != '' && message.image_status == '1'">
+            </ion-item>
+            <div class="last-item" ng-bind-html="message.description"></div>
+        </div>
+	</ion-content>
+</ion-view>

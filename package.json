@@ -1,0 +1,40 @@
+{
+  "name": "kcm_app",
+  "version": "1.0.0",
+  "description": "kcm_app: An Ionic project",
+  "dependencies": {
+    "angular": "^1.3.16",
+    "angular-cache": "^4.2.0",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "org.apache.cordova.device",
+    "org.apache.cordova.console",
+    "com.ionic.keyboard",
+    "com.phonegap.plugins.PushPlugin",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-inappbrowser",
+    "cordova-plugin-network-information",
+    "cordova-plugin-whitelist",
+    "nl.x-services.plugins.toast",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.splashscreen",
+    "org.pbernasconi.progressindicator",
+    "org.pushandplay.cordova.apprate"
+  ],
+  "cordovaPlatforms": [
+    "android",
+    "ios"
+  ]
+}
